@@ -1,1 +1,1 @@
-# web3js-example-react-app
+![Example React App Web3js](./app.gif)
