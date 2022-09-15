@@ -1,7 +1,8 @@
 import React, {useState, useCallback, ChangeEvent} from 'react'
-import {web3} from '../web3/web3'
+import * as utils from 'web3-utils'
 import {Input} from './Input'
-
+import{web3} from '../web3/web3'
+console.log('utils',utils)
 export const UtilExample = () => {
     const [hex, setHex] = useState('')
     const [num, setNum] = useState('')
@@ -9,7 +10,8 @@ export const UtilExample = () => {
         const value = e.target.value
         try {
             setHex(web3.utils.numberToHex(value))
-        } catch {
+        } catch(e) {
+            console.log('e',e)
             setHex('Incorrect number')
         }
         setNum(value)
@@ -18,7 +20,8 @@ export const UtilExample = () => {
         const value = e.target.value
         try {
             setNum(String(web3.utils.hexToNumber(value)))
-        } catch {
+        } catch(e) {
+            console.log('e',e)
             setNum('Incorrect hex')
         }
         setHex(value)

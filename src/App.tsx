@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {UtilExample} from './components/UtilExample'
+// import {UtilExample} from './components/UtilExample'
 import {WalletExample} from './components/WalletExample'
 import logo from './logo.png'
 
@@ -12,7 +12,7 @@ function App() {
             </div>
             <div>
                 <div className='Card'><h1>Example React App</h1></div>
-                <UtilExample/>
+                {/*<UtilExample/>*/}
                 <WalletExample/>
             </div>
 

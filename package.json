@@ -15,13 +15,18 @@
     "react-scripts": "5.0.1",
     "typescript": "^4.8.3",
     "web-vitals": "^2.1.4",
-    "web3": "^4.0.1-alpha.0"
+    "web3": "^4.0.1-alpha.0",
+    "web3-errors": "0.1.1-alpha.0",
+    "web3-eth": "^4.0.1-alpha.0",
+    "web3-eth-accounts": "4.0.1-alpha.0",
+    "web3-types": "0.1.1-alpha.0",
+    "web3-utils": "^4.0.1-alpha.0"
   },
   "scripts": {
-    "start": "node_modules/.bin/react-scripts start",
-    "build": "node_modules/.bin/react-scripts build",
-    "test": "node_modules/.bin/react-scripts test",
-    "eject": "node_modules/.bin/react-scripts eject"
+    "start": "node_modules/.bin/react-app-rewired start",
+    "build": "node_modules/.bin/react-app-rewired build",
+    "test": "node_modules/.bin/react-app-rewired test",
+    "eject": "node_modules/.bin/react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +45,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "ethereum-cryptography": "^1.1.2",
+    "http-browserify": "^1.7.0",
+    "https-browserify": "^1.0.0",
+    "process": "^0.11.10",
+    "react-app-rewired": "^2.2.1",
+    "readable-stream": "^4.1.0",
+    "ts-loader": "^9.3.1",
+    "util": "^0.12.4",
+    "web3-validator": "0.1.1-alpha.0",
+    "webpack": "^5.74.0"
   }
 }
