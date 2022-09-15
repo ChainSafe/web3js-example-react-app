@@ -1,6 +1,6 @@
 import React, {useState, useCallback, ChangeEvent, useEffect} from 'react'
 import {Wallet} from '../web3/wallet'
-import {web3} from '../web3/web3'
+// import {web3} from '../web3/web3'
 import {Input} from './Input'
 
 export const WalletExample = () => {
@@ -12,13 +12,13 @@ export const WalletExample = () => {
 
     const getBalance = useCallback(() => {
         wallet?.getBalance().then((balance) => {
-            setBalance(String(web3.utils.fromWei(balance, 'ether')))
+            // setBalance(String(eth.fromWei(balance, 'ether')))
         })
     }, [wallet, setBalance])
 
     const getToAddressBalance = useCallback((address?: string) => {
         wallet?.getBalance(address || toAddress).then(balance => {
-            setToAddressBalance(String(web3.utils.fromWei(balance, 'ether')))
+            // setToAddressBalance(String(web3.utils.fromWei(balance, 'ether')))
         })
     }, [toAddress, wallet, setToAddressBalance])
 
@@ -29,7 +29,8 @@ export const WalletExample = () => {
     }, [setToAddress, getToAddressBalance])
 
     const handleSendEther = useCallback(async () => {
-        await wallet?.sendEther(toAddress, web3.utils.toWei(0.001, 'ether'))
+        await wallet?.sendEther(toAddress, '0x1')
+        // await wallet?.sendEther(toAddress, web3.utils.toWei(0.001, 'ether'))
         getToAddressBalance()
         getBalance()
     }, [toAddress, wallet, getToAddressBalance, getBalance])
